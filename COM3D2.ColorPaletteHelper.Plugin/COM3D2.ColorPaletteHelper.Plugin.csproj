@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>G:\repos\_lib\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>G:\repos\_lib\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>G:\repos\_lib\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,9 +48,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>G:\repos\_lib\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityInjector">
-      <HintPath>G:\repos\_lib\UnityInjector.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
