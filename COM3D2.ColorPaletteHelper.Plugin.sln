@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COM3D2.ColorPaletteHelper.Plugin", "COM3D2.ColorPaletteHelper.Plugin\COM3D2.ColorPaletteHelper.Plugin.csproj", "{5F23E226-6337-4B98-9094-5A87FF88E731}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B74C99EB-E35C-4745-9FC5-01895457F03D}"
-	ProjectSection(SolutionItems) = preProject
-		COM3D2.ColorPaletteHelper.Plugin\COM3D2.ColorPaletteHelper.Plugin.bat = COM3D2.ColorPaletteHelper.Plugin\COM3D2.ColorPaletteHelper.Plugin.bat
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

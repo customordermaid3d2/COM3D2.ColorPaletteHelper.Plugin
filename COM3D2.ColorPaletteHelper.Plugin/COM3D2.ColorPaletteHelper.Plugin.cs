@@ -3,14 +3,15 @@ using BepInEx;
 using System;
 using System.Reflection;
 using UnityEngine;
+//using UnityInjector;
+//using UnityInjector.Attributes;
 
-
+// https://ux.getuploader.com/com3d2_mod_kyouyu/download/14
 namespace COM3D2.ColorPaletteHelper.Plugin
 {
     //[PluginFilter("COM3D2x64"), PluginName("COM3D2 Color Palette Helper"), PluginVersion("0.4.0")]
-    [BepInPlugin("COM3D2.Lilly.ColorPaletteHelper", "COM3D2 Color Palette Helper", "0.4.0")]// 버전 규칙 잇음. 반드시 2~4개의 숫자구성으로 해야함. 미준수시 못읽어들임
-    [BepInProcess("COM3D2x64.exe")]
-    public class ColorPaletteHelper : BaseUnityPlugin
+    [BepInPlugin("OM3D2.ColorPaletteHelper", "ColorPaletteHelper", "0.4.0")]
+    public class ColorPaletteHelper : BaseUnityPlugin// PluginBase
     {
         private class ConstValues
         {
@@ -89,7 +90,7 @@ namespace COM3D2.ColorPaletteHelper.Plugin
             public static readonly int COLOR_EDIT_COLOR_SET_BLACK_SQUARE_FONT_SIZE = 40;
             public static readonly string COLOR_EDIT_COLOR_SET_BLACK_SQUARE_CHARACTER = "■";
 
-            public static readonly string RANDOM_EDIT_TITLE = "ランダム編集";// 랜덤편집
+            public static readonly string RANDOM_EDIT_TITLE = "ランダム編集";
             public static readonly string RANDOM_EDIT_EXECUTE = "実行";
 
             public static readonly string UTILITY_EDIT_TITLE = "ユーティリティ";
@@ -344,11 +345,11 @@ namespace COM3D2.ColorPaletteHelper.Plugin
                 m_color_edit_control_switch[i] = false;
             }
 
-            m_random_edit_switch = true;
+            m_random_edit_switch = false;
             m_random_edit_control_switch = new bool[13];
             for (int i = 0; i < m_random_edit_control_switch.Length; i++)
             {
-                m_random_edit_control_switch[i] = true;
+                m_random_edit_control_switch[i] = false;
             }
 
             m_utility_edit_switch = false;
@@ -881,7 +882,6 @@ namespace COM3D2.ColorPaletteHelper.Plugin
                         content_sub_y += 5.0f;
                     }
 
-                    #region 갠덤편집
                     {
                         {
                             m_random_edit_switch = GUI.Toggle(new Rect(content_x - 5.0f, content_sub_y, content_width, 20.0f), m_random_edit_switch, ConstValues.RANDOM_EDIT_TITLE);
@@ -927,7 +927,6 @@ namespace COM3D2.ColorPaletteHelper.Plugin
 
                         content_sub_y += 5.0f;
                     }
-                    #endregion
 
                     {
                         {
