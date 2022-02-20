@@ -94,15 +94,15 @@ namespace COM3D2.ColorPaletteHelper.Plugin
             public static readonly string RANDOM_EDIT_EXECUTE = "실행";
 
             public static readonly string UTILITY_EDIT_TITLE = "유틸리티";
-            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_SHADOW = "기본색상을 그림자색상으로 복사";
-            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_MAIN = "그림자색상을 기본색상으로 복사";
-            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_SHADOW = "기본색과 그림자색을 교환";
-            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_OUTLINE = "기본색상을 윤곽색상으로 복사";
-            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_MAIN = "윤곽색상을 기본색상으로 복사";
-            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_OUTLINE = "기본색과 윤곽색을 바꿈";
-            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_OUTLINE = "그림자색을 윤곽색으로 복사";
-            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_SHADOW = "윤곽색을 그림자색으로 복사";
-            public static readonly string UTILITY_EDIT_SWAP_SHADOW_FOR_OUTLINE = "그림자색과 윤곽색을 바꿉";
+            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_SHADOW = "기본->그림자 복사";
+            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_MAIN = "그림자->기본 복사";
+            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_SHADOW = "기본<->그림자색 교환";
+            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_OUTLINE = "기본->윤곽 복사";
+            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_MAIN = "윤곽->기본 복사";
+            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_OUTLINE = "기본<->윤곽색 교환";
+            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_OUTLINE = "그림자->윤곽색 복사";
+            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_SHADOW = "윤곽->그림자 복사";
+            public static readonly string UTILITY_EDIT_SWAP_SHADOW_FOR_OUTLINE = "그림자<->윤곽 교환";
             public static readonly string UTILITY_EDIT_EXECUTE = "실행";
 
             public static readonly string[] UTILITY_EDIT_NAMES = new string[] {
@@ -346,10 +346,11 @@ namespace COM3D2.ColorPaletteHelper.Plugin
             }
 
             m_random_edit_switch = false;
+            // 랜덤 초기화
             m_random_edit_control_switch = new bool[13];
             for (int i = 0; i < m_random_edit_control_switch.Length; i++)
             {
-                m_random_edit_control_switch[i] = false;
+                m_random_edit_control_switch[i] = true;
             }
 
             m_utility_edit_switch = false;
@@ -398,6 +399,7 @@ namespace COM3D2.ColorPaletteHelper.Plugin
                 m_color_edit_control_switch[i] = true;
             }
 
+            // 랜덤 활성화 할것만 초기값 세팅
             for (int i = 0; i < 4; i++)
             {
                 m_random_edit_control_switch[i] = true;
