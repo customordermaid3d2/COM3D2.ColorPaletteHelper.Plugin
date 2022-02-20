@@ -47,25 +47,25 @@ namespace COM3D2.ColorPaletteHelper.Plugin
             }
 
             public static readonly COLOR_PARAMETER[] COLOR_PARAMETERS = new COLOR_PARAMETER[]{
-        new COLOR_PARAMETER("色相", 0, 255),
-        new COLOR_PARAMETER("彩度", 0, 255),
-        new COLOR_PARAMETER("明度", 0, 510),
-        new COLOR_PARAMETER("対照", 0, 200),
-        new COLOR_PARAMETER("色相(影)", 0, 255),
-        new COLOR_PARAMETER("彩度(影)", 0, 255),
-        new COLOR_PARAMETER("明度(影)", 0, 510),
-        new COLOR_PARAMETER("対照(影)", 0, 200),
-        new COLOR_PARAMETER("色相(線)", 0, 255),
-        new COLOR_PARAMETER("彩度(線)", 0, 255),
-        new COLOR_PARAMETER("明度(線)", 0, 510),
-        new COLOR_PARAMETER("対照(線)", 0, 200),
-        new COLOR_PARAMETER("影率", 0, 255),
+        new COLOR_PARAMETER("색조", 0, 255),
+        new COLOR_PARAMETER("채도", 0, 255),
+        new COLOR_PARAMETER("밝기", 0, 510),
+        new COLOR_PARAMETER("대조", 0, 200),
+        new COLOR_PARAMETER("색조(그림자)", 0, 255),
+        new COLOR_PARAMETER("채도(그림자)", 0, 255),
+        new COLOR_PARAMETER("밝기(그림자)", 0, 510),
+        new COLOR_PARAMETER("대조(그림자)", 0, 200),
+        new COLOR_PARAMETER("색조(선)", 0, 255),
+        new COLOR_PARAMETER("채도(선)", 0, 255),
+        new COLOR_PARAMETER("밝기(선)", 0, 510),
+        new COLOR_PARAMETER("대조(선)", 0, 200),
+        new COLOR_PARAMETER("그림자율", 0, 255),
       };
 
-            public static readonly string COLOR_INFORMATION_TITLE = "色情報";
-            public static readonly string COLOR_INFORMATION_MAIN_COLOR = "基本色";
-            public static readonly string COLOR_INFORMATION_SHADOW_COLOR = "影色";
-            public static readonly string COLOR_INFORMATION_OUTLINE_COLOR = "輪郭色";
+            public static readonly string COLOR_INFORMATION_TITLE = "색 정보";
+            public static readonly string COLOR_INFORMATION_MAIN_COLOR = "기본색상";
+            public static readonly string COLOR_INFORMATION_SHADOW_COLOR = "그림자";
+            public static readonly string COLOR_INFORMATION_OUTLINE_COLOR = "윤곽색상";
 
             public static readonly string[] COLOR_INFORMATION_COLORS = new string[] {
         COLOR_INFORMATION_MAIN_COLOR,
@@ -73,14 +73,14 @@ namespace COM3D2.ColorPaletteHelper.Plugin
         COLOR_INFORMATION_OUTLINE_COLOR
       };
 
-            public static readonly string COLOR_EDIT_TITLE = "色の編集";
-            public static readonly string COLOR_EDIT_SETTING_TITLE = "編集設定";
-            public static readonly string COLOR_EDIT_SETTING_USE_SLIDER = "スライダーを使用する";
-            public static readonly string COLOR_EDIT_SETTING_USE_COLOR_SET = "カラーセットを使用する";
-            public static readonly string COLOR_EDIT_COLOR_TITLE = "編集対象";
-            public static readonly string COLOR_EDIT_COLOR_MAIN = "基本色";
-            public static readonly string COLOR_EDIT_COLOR_SHADOW = "影色";
-            public static readonly string COLOR_EDIT_COLOR_OUTLINE = "輪郭色";
+            public static readonly string COLOR_EDIT_TITLE = "색상편집";
+            public static readonly string COLOR_EDIT_SETTING_TITLE = "편집설정";
+            public static readonly string COLOR_EDIT_SETTING_USE_SLIDER = "슬라이더 사용";
+            public static readonly string COLOR_EDIT_SETTING_USE_COLOR_SET = "컬러세트 사용";
+            public static readonly string COLOR_EDIT_COLOR_TITLE = "편집 대상";
+            public static readonly string COLOR_EDIT_COLOR_MAIN = "기본색상";
+            public static readonly string COLOR_EDIT_COLOR_SHADOW = "그림자";
+            public static readonly string COLOR_EDIT_COLOR_OUTLINE = "윤곽색상";
 
             public static readonly string COLOR_EDIT_ADJUST_SET_MINUS_1 = "-1";
             public static readonly string COLOR_EDIT_ADJUST_SET_PLUS_1 = "+1";
@@ -90,20 +90,20 @@ namespace COM3D2.ColorPaletteHelper.Plugin
             public static readonly int COLOR_EDIT_COLOR_SET_BLACK_SQUARE_FONT_SIZE = 40;
             public static readonly string COLOR_EDIT_COLOR_SET_BLACK_SQUARE_CHARACTER = "■";
 
-            public static readonly string RANDOM_EDIT_TITLE = "ランダム編集";
-            public static readonly string RANDOM_EDIT_EXECUTE = "実行";
+            public static readonly string RANDOM_EDIT_TITLE = "랜덤 편집";
+            public static readonly string RANDOM_EDIT_EXECUTE = "실행";
 
-            public static readonly string UTILITY_EDIT_TITLE = "ユーティリティ";
-            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_SHADOW = "基本色を影色にコピー";
-            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_MAIN = "影色を基本色にコピー";
-            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_SHADOW = "基本色と影色を入れ替え";
-            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_OUTLINE = "基本色を輪郭色にコピー";
-            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_MAIN = "輪郭色を基本色にコピー";
-            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_OUTLINE = "基本色と輪郭色を入れ替え";
-            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_OUTLINE = "影色を輪郭色にコピー";
-            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_SHADOW = "輪郭色を影色にコピー";
-            public static readonly string UTILITY_EDIT_SWAP_SHADOW_FOR_OUTLINE = "影色と輪郭色を入れ替え";
-            public static readonly string UTILITY_EDIT_EXECUTE = "実行";
+            public static readonly string UTILITY_EDIT_TITLE = "유틸리티";
+            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_SHADOW = "기본색상을 그림자색상으로 복사";
+            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_MAIN = "그림자색상을 기본색상으로 복사";
+            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_SHADOW = "기본색과 그림자색을 교환";
+            public static readonly string UTILITY_EDIT_COPY_MAIN_TO_OUTLINE = "기본색상을 윤곽색상으로 복사";
+            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_MAIN = "윤곽색상을 기본색상으로 복사";
+            public static readonly string UTILITY_EDIT_SWAP_MAIN_FOR_OUTLINE = "기본색과 윤곽색을 바꿈";
+            public static readonly string UTILITY_EDIT_COPY_SHADOW_TO_OUTLINE = "그림자색을 윤곽색으로 복사";
+            public static readonly string UTILITY_EDIT_COPY_OUTLINE_TO_SHADOW = "윤곽색을 그림자색으로 복사";
+            public static readonly string UTILITY_EDIT_SWAP_SHADOW_FOR_OUTLINE = "그림자색과 윤곽색을 바꿉";
+            public static readonly string UTILITY_EDIT_EXECUTE = "실행";
 
             public static readonly string[] UTILITY_EDIT_NAMES = new string[] {
         UTILITY_EDIT_COPY_MAIN_TO_SHADOW,
@@ -117,8 +117,8 @@ namespace COM3D2.ColorPaletteHelper.Plugin
         UTILITY_EDIT_SWAP_SHADOW_FOR_OUTLINE,
       };
 
-            public static readonly string OTHER_SETTING_TITLE = "その他設定";
-            public static readonly string OTHER_SETTING_DISABLE_GAME_CONTROL = "ゲーム側操作を無効化する";
+            public static readonly string OTHER_SETTING_TITLE = "기타 설정";
+            public static readonly string OTHER_SETTING_DISABLE_GAME_CONTROL = "게임측 조작 비활성화";
         }
 
         private struct COLOR_VALUE
